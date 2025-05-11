@@ -51,4 +51,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         heartMessage.appendChild(span);
     });
+
+    // Background music autoplay from 21 seconds
+    const audio = document.getElementById('bg-music');
+    if (audio) {
+        audio.currentTime = 21;
+        const playMusic = () => {
+            audio.currentTime = 21;
+            audio.play().catch(() => {
+                // If autoplay is blocked, show a play button
+                let btn = document.getElementById('music-play-btn');
+                if (!btn) {
+                    btn = document.createElement('button');
+                    btn.id = 'music-play-btn';
+                    btn.textContent = 'Play Music';
+                    btn.style.position = 'fixed';
+                    btn.style.bottom = '24px';
+                    btn.style.right = '24px';
+                    btn.style.zIndex = '1000';
+                    btn.style.padding = '12px 20px';
+                    btn.style.background = '#ff4b6e';
+                    btn.style.color = '#fff';
+                    btn.style.border = 'none';
+                    btn.style.borderRadius = '24px';
+                    btn.style.boxShadow = '0 2px 8px rgba(0,0,0,0.12)';
+                    btn.style.fontSize = '1rem';
+                    btn.style.cursor = 'pointer';
+                    btn.onclick = () => {
+                        audio.currentTime = 21;
+                        audio.play();
+                        btn.remove();
+                    };
+                    document.body.appendChild(btn);
+                }
+            });
+        };
+        playMusic();
+    }
 }); 
