@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add animation to photos when they come into view
     const photos = document.querySelectorAll('.photo-container');
     
+    // Staggered fade-in for photo cards
+    photos.forEach((photo, idx) => {
+        photo.style.setProperty('--fade-delay', `${0.2 + idx * 0.18}s`);
+    });
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {

@@ -7,13 +7,94 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Artistic animated SVG background -->
+    <svg class="art-bg" width="100%" height="100%" viewBox="0 0 1440 900" preserveAspectRatio="none" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;">
+      <defs>
+        <linearGradient id="waveGradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ffe0ec"/>
+          <stop offset="50%" stop-color="#c1eaff"/>
+          <stop offset="100%" stop-color="#b85c8e"/>
+        </linearGradient>
+        <radialGradient id="heartGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ffb6c1" stop-opacity="0.7"/>
+          <stop offset="100%" stop-color="#ffb6c1" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <g>
+        <path id="wave1" fill="url(#waveGradient)" fill-opacity="0.7">
+          <animate attributeName="d" dur="12s" repeatCount="indefinite"
+            values="M0,700 Q360,800 720,700 T1440,700 V900 H0 Z;
+                    M0,700 Q360,600 720,800 T1440,700 V900 H0 Z;
+                    M0,700 Q360,800 720,700 T1440,700 V900 H0 Z"/>
+        </path>
+        <path id="wave2" fill="url(#waveGradient)" fill-opacity="0.4">
+          <animate attributeName="d" dur="10s" repeatCount="indefinite"
+            values="M0,750 Q400,850 900,750 T1440,750 V900 H0 Z;
+                    M0,750 Q400,700 900,850 T1440,750 V900 H0 Z;
+                    M0,750 Q400,850 900,750 T1440,750 V900 H0 Z"/>
+        </path>
+        <!-- Animated floating hearts/flowers -->
+        <g>
+          <g>
+            <circle r="60" cx="200" cy="800" fill="url(#heartGlow)">
+              <animate attributeName="cy" values="800;200;800" dur="14s" repeatCount="indefinite"/>
+            </circle>
+            <text x="200" y="800" font-size="40" text-anchor="middle" alignment-baseline="middle" opacity="0.7">
+              <animate attributeName="y" values="800;200;800" dur="14s" repeatCount="indefinite"/>
+              ❤️
+            </text>
+          </g>
+          <g>
+            <circle r="40" cx="1200" cy="850" fill="url(#heartGlow)">
+              <animate attributeName="cy" values="850;300;850" dur="11s" repeatCount="indefinite"/>
+            </circle>
+            <text x="1200" y="850" font-size="32" text-anchor="middle" alignment-baseline="middle" opacity="0.7">
+              <animate attributeName="y" values="850;300;850" dur="11s" repeatCount="indefinite"/>
+              🌸
+            </text>
+          </g>
+          <g>
+            <circle r="30" cx="700" cy="900" fill="url(#heartGlow)">
+              <animate attributeName="cy" values="900;100;900" dur="17s" repeatCount="indefinite"/>
+            </circle>
+            <text x="700" y="900" font-size="28" text-anchor="middle" alignment-baseline="middle" opacity="0.7">
+              <animate attributeName="y" values="900;100;900" dur="17s" repeatCount="indefinite"/>
+              💖
+            </text>
+          </g>
+        </g>
+      </g>
+    </svg>
     <!-- Floating hearts background -->
     <span class="floating-heart" style="left: 10%; animation-delay: 0s;">❤️</span>
     <span class="floating-heart" style="left: 30%; animation-delay: 2s;">💖</span>
     <span class="floating-heart" style="left: 50%; animation-delay: 4s;">💗</span>
     <span class="floating-heart" style="left: 70%; animation-delay: 1s;">💓</span>
     <span class="floating-heart" style="left: 85%; animation-delay: 3s;">💕</span>
+    <!-- Floating flower/heart overlay -->
+    <span class="floating-flower" style="left: 15%; animation-delay: 1s;">🌸</span>
+    <span class="floating-flower" style="left: 35%; animation-delay: 3s;">💐</span>
+    <span class="floating-flower" style="left: 55%; animation-delay: 2s;">🌺</span>
+    <span class="floating-flower" style="left: 75%; animation-delay: 4s;">🌷</span>
+    <span class="floating-flower" style="left: 85%; animation-delay: 2.5s;">💖</span>
+    <!-- Animated background shapes -->
+    <span class="animated-bg-shape heart1">❤️</span>
+    <span class="animated-bg-shape heart2">💖</span>
+    <span class="animated-bg-shape flower1">🌸</span>
+    <span class="animated-bg-shape flower2">🌷</span>
+    <span class="animated-bg-shape circle1">●</span>
+    <!-- Animated bokeh background circles -->
+    <span class="bokeh b1"></span>
+    <span class="bokeh b2"></span>
+    <span class="bokeh b3"></span>
+    <span class="bokeh b4"></span>
+    <span class="bokeh b5"></span>
     <div class="container">
+        <!-- Animated container background shapes -->
+        <span class="container-anim-shape heart" style="left: 12%; animation-delay: 0.5s;">❤️</span>
+        <span class="container-anim-shape flower" style="left: 60%; animation-delay: 2s;">🌸</span>
+        <span class="container-anim-shape heart" style="left: 80%; animation-delay: 1.5s;">💖</span>
+        <span class="container-anim-shape flower" style="left: 30%; animation-delay: 3s;">🌷</span>
         <div class="header">
             <h1 class="title">Happy Mother's Day</h1>
             <p class="subtitle">To the most amazing mom in the world!</p>
