@@ -114,29 +114,12 @@ body {
     position: relative;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.32);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
     border-radius: 18px;
     box-shadow: 0 0 32px 0 #ffe0ec, 0 1.5px 4px rgba(0,0,0,0.08);
     padding-bottom: 24px;
     backdrop-filter: blur(12px) saturate(1.2);
     -webkit-backdrop-filter: blur(12px) saturate(1.2);
-}
-.container::before {
-    content: '';
-    position: absolute;
-    z-index: 2;
-    top: -3px; left: -3px; right: -3px; bottom: -3px;
-    border-radius: 22px;
-    padding: 0;
-    background: linear-gradient(270deg, #ff4b6e, #ffb347, #00bfff, #7f7fd5, #ff4b6e);
-    background-size: 400% 400%;
-    animation: borderGradientMove 8s linear infinite;
-    pointer-events: none;
-    filter: blur(0.5px);
-}
-@keyframes borderGradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 .container-anim-shape {
@@ -202,19 +185,21 @@ body {
     box-shadow: 0 8px 24px rgba(255, 75, 110, 0.15), 0 1.5px 4px rgba(0,0,0,0.08);
     background: #fff;
     border: 2px solid #ffb6c1;
-    transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s;
+    transition: box-shadow 0.3s, border 0.3s, transform 0.3s;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 16px;
-    opacity: 1 !important;
-    animation: none !important;
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    animation: fadeInCard 0.9s cubic-bezier(.25,.8,.25,1) forwards;
+    animation-delay: var(--fade-delay, 0s);
 }
 
 .photo-container:hover {
-    transform: translateY(-8px) scale(1.04) rotate(-2deg);
-    box-shadow: 0 16px 32px rgba(255, 75, 110, 0.25), 0 3px 8px rgba(0,0,0,0.10);
+    box-shadow: 0 16px 32px rgba(255, 75, 110, 0.18), 0 3px 8px rgba(0,0,0,0.10);
     border-color: #ff4b6e;
+    transform: translateY(-4px) scale(1.03);
 }
 
 .photo {
@@ -233,9 +218,8 @@ body {
 }
 
 .photo-container:hover .photo {
-    transform: scale(1.06);
+    transform: scale(1.06) rotate(-1deg);
     box-shadow: 0 8px 32px rgba(255, 75, 110, 0.18), 0 3px 8px rgba(0,0,0,0.10);
-    border-color: #ffb6c1;
 }
 
 .caption {
@@ -245,12 +229,15 @@ body {
     text-align: center;
     margin-top: 4px;
     letter-spacing: 0.5px;
-    transition: color 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.3s, transform 0.3s, color 0.3s;
 }
 
 .photo-container:hover .caption {
+    opacity: 1;
+    transform: translateY(0);
     color: #b85c8e;
-    transform: scale(1.08) rotate(-2deg);
 }
 
 .message {
@@ -305,7 +292,7 @@ body {
 }
 
 @keyframes fadeInCard {
-    from { opacity: 0; transform: translateY(30px) scale(0.96); }
+    from { opacity: 0; transform: translateY(30px) scale(0.98); }
     to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
@@ -371,188 +358,4 @@ body {
         margin-bottom: 10px;
         animation: bounce 1.5s infinite;
     }
-}
-
-.mouse-trail-dot {
-    position: fixed;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    pointer-events: none;
-    opacity: 0.5;
-    z-index: 1000;
-    filter: blur(2px);
-    transform: translate(-50%, -50%);
-    animation: trailFade 0.6s linear forwards;
-}
-@keyframes trailFade {
-    0% { opacity: 0.7; transform: scale(1) translate(-50%, -50%); }
-    100% { opacity: 0; transform: scale(0.5) translate(-50%, -50%); }
-}
-
-.confetti {
-    position: fixed;
-    top: -24px;
-    width: 12px;
-    height: 18px;
-    border-radius: 3px;
-    opacity: 0.7;
-    z-index: 1000;
-    animation: confettiFall 6s linear infinite;
-}
-@keyframes confettiFall {
-    0% { top: -24px; opacity: 0.7; }
-    80% { opacity: 0.7; }
-    100% { top: 110vh; opacity: 0; }
-}
-
-.sparkle {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: radial-gradient(circle, #fff 60%, #ffb6c1 100%);
-    opacity: 0.7;
-    z-index: 1000;
-    pointer-events: none;
-    animation: sparkleTwinkle 3s linear infinite;
-}
-@keyframes sparkleTwinkle {
-    0%, 100% { opacity: 0.7; transform: scale(1); }
-    50% { opacity: 0.2; transform: scale(1.4); }
-}
-
-.glow-title {
-    text-shadow: 0 0 16px #ff4b6e, 0 0 32px #ffb6c1, 0 2px 8px #fff;
-    animation: glowPulse 2.2s infinite alternate;
-}
-@keyframes glowPulse {
-    0% { text-shadow: 0 0 8px #ff4b6e, 0 0 16px #ffb6c1, 0 2px 8px #fff; }
-    100% { text-shadow: 0 0 24px #ff4b6e, 0 0 48px #ffb6c1, 0 2px 16px #fff; }
-}
-
-.floating-icon {
-    position: fixed;
-    z-index: 10;
-    font-size: 2.2rem;
-    opacity: 0.45;
-    pointer-events: none;
-    animation: floatIcon 14s linear infinite;
-}
-.floating-icon.heart { color: #ff4b6e; }
-.floating-icon.flower { color: #b85c8e; }
-.floating-icon.star { color: #ffd700; }
-@keyframes floatIcon {
-    0% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0.45; }
-    50% { opacity: 0.7; }
-    100% { transform: translateY(-100vh) scale(1.2) rotate(30deg); opacity: 0.45; }
-}
-
-.center-btn {
-    display: flex;
-    justify-content: center;
-    margin: 24px 0 0 0;
-    z-index: 10;
-    position: relative;
-}
-.festive-btn {
-    background: linear-gradient(90deg, #ff4b6e, #ffb347, #00bfff, #7f7fd5, #ff4b6e);
-    background-size: 300% 300%;
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 32px;
-    padding: 14px 38px;
-    box-shadow: 0 4px 24px #ffb6c1a0;
-    cursor: pointer;
-    outline: none;
-    transition: transform 0.2s, box-shadow 0.2s;
-    animation: btnGradientMove 4s linear infinite;
-    position: relative;
-    overflow: hidden;
-}
-.festive-btn:active {
-    transform: scale(0.96);
-    box-shadow: 0 2px 12px #ffb6c1a0;
-}
-.festive-btn::after {
-    content: '';
-    position: absolute;
-    left: 50%; top: 50%;
-    width: 0; height: 0;
-    background: rgba(255,255,255,0.5);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    transition: width 0.4s, height 0.4s;
-}
-.festive-btn.ripple::after {
-    width: 220px;
-    height: 220px;
-    transition: width 0.4s, height 0.4s;
-}
-@keyframes btnGradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.scroll-indicator {
-    position: fixed;
-    left: 50%;
-    bottom: 18px;
-    transform: translateX(-50%);
-    z-index: 1001;
-    font-size: 2.2rem;
-    color: #ff4b6e;
-    opacity: 0.7;
-    animation: scrollBounce 1.2s infinite alternate;
-    pointer-events: none;
-}
-@keyframes scrollBounce {
-    0% { transform: translateX(-50%) translateY(0); }
-    100% { transform: translateX(-50%) translateY(12px); }
-}
-
-/* Lightbox/modal overlay styles (for gallery) */
-#lightboxOverlay {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0; top: 0; width: 100vw; height: 100vh;
-    background: rgba(0,0,0,0.7);
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.3s;
-}
-#lightboxOverlay.active {
-    display: flex;
-    opacity: 1;
-}
-#lightboxImg {
-    max-width: 90vw;
-    max-height: 80vh;
-    border-radius: 18px;
-    box-shadow: 0 8px 32px #0008;
-    background: #fff;
-    padding: 8px;
-}
-#lightboxClose, #lightboxPrev, #lightboxNext {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 40px; height: 40px;
-    font-size: 1.5rem;
-    color: #ff4b6e;
-    cursor: pointer;
-    box-shadow: 0 2px 8px #0002;
-    opacity: 0.8;
-    z-index: 2010;
-}
-#lightboxClose { right: 24px; top: 24px; transform: none; }
-#lightboxPrev { left: 24px; }
-#lightboxNext { right: 24px; } 
+} 
