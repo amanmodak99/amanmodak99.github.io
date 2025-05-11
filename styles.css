@@ -111,17 +111,15 @@ body {
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
     position: relative;
-    z-index: 1;
-    box-shadow: 0 8px 32px 0 rgba(255, 75, 110, 0.10), 0 1.5px 4px rgba(0,0,0,0.08);
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.32);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
     border-radius: 18px;
-    background: linear-gradient(135deg, rgba(255,224,236,0.92) 0%, rgba(193,234,255,0.88) 100%);
-    border: 2.5px solid #ffb6c1;
-    padding-bottom: 24px;
-    backdrop-filter: blur(2px);
     box-shadow: 0 0 32px 0 #ffe0ec, 0 1.5px 4px rgba(0,0,0,0.08);
+    padding-bottom: 24px;
+    backdrop-filter: blur(12px) saturate(1.2);
+    -webkit-backdrop-filter: blur(12px) saturate(1.2);
 }
 
 .container-anim-shape {
@@ -156,17 +154,10 @@ body {
     font-size: 3rem;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(90deg, #ff4b6e, #ffb6c1, #c1eaff, #b85c8e);
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientMove 3s linear infinite;
-}
-
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    animation: none;
 }
 
 .subtitle {

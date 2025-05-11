@@ -7,6 +7,130 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Animated SVG geometric pattern background -->
+    <svg class="geo-bg" width="100%" height="100%" viewBox="0 0 1440 900" preserveAspectRatio="none" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-3;pointer-events:none;">
+      <defs>
+        <linearGradient id="geoGrad1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#00bfff"/>
+          <stop offset="100%" stop-color="#00ffb0"/>
+        </linearGradient>
+        <linearGradient id="geoGrad2" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ffb347"/>
+          <stop offset="100%" stop-color="#ff5e62"/>
+        </linearGradient>
+        <linearGradient id="geoGrad3" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#7f7fd5"/>
+          <stop offset="100%" stop-color="#86a8e7"/>
+        </linearGradient>
+      </defs>
+      <!-- Top left swirl -->
+      <g>
+        <g>
+          <rect x="60" y="40" width="32" height="32" fill="url(#geoGrad1)">
+            <animateTransform attributeName="transform" type="rotate" from="0 76 56" to="360 76 56" dur="12s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="120" y="80" width="24" height="24" fill="url(#geoGrad3)">
+            <animateTransform attributeName="transform" type="rotate" from="0 132 92" to="-360 132 92" dur="10s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="180" y="60" width="18" height="18" fill="url(#geoGrad2)">
+            <animateTransform attributeName="transform" type="rotate" from="0 189 69" to="360 189 69" dur="14s" repeatCount="indefinite"/>
+          </rect>
+          <circle cx="100" cy="120" r="12" fill="#00bfff" opacity="0.7">
+            <animate attributeName="cy" values="120;100;120" dur="8s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="160" cy="100" r="8" fill="#00ffb0" opacity="0.6">
+            <animate attributeName="cy" values="100;130;100" dur="10s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </g>
+      <!-- Bottom right swirl -->
+      <g>
+        <g>
+          <rect x="1240" y="800" width="32" height="32" fill="url(#geoGrad2)">
+            <animateTransform attributeName="transform" type="rotate" from="0 1256 816" to="-360 1256 816" dur="13s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="1180" y="860" width="24" height="24" fill="url(#geoGrad1)">
+            <animateTransform attributeName="transform" type="rotate" from="0 1192 872" to="360 1192 872" dur="11s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="1300" y="840" width="18" height="18" fill="url(#geoGrad3)">
+            <animateTransform attributeName="transform" type="rotate" from="0 1309 849" to="-360 1309 849" dur="15s" repeatCount="indefinite"/>
+          </rect>
+          <circle cx="1280" cy="880" r="12" fill="#ffb347" opacity="0.7">
+            <animate attributeName="cy" values="880;860;880" dur="9s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="1340" cy="860" r="8" fill="#ff5e62" opacity="0.6">
+            <animate attributeName="cy" values="860;890;860" dur="12s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </g>
+      <!-- Center swirl -->
+      <g>
+        <g>
+          <rect x="700" y="400" width="40" height="40" fill="url(#geoGrad3)">
+            <animateTransform attributeName="transform" type="rotate" from="0 720 420" to="360 720 420" dur="16s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="760" y="440" width="28" height="28" fill="url(#geoGrad1)">
+            <animateTransform attributeName="transform" type="rotate" from="0 774 454" to="-360 774 454" dur="14s" repeatCount="indefinite"/>
+          </rect>
+          <circle cx="740" cy="480" r="14" fill="#7f7fd5" opacity="0.7">
+            <animate attributeName="cy" values="480;500;480" dur="11s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="780" cy="460" r="10" fill="#86a8e7" opacity="0.6">
+            <animate attributeName="cy" values="460;490;460" dur="13s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+      </g>
+      <!-- More scattered animated squares and circles for density -->
+      <g>
+        <rect x="300" y="200" width="16" height="16" fill="url(#geoGrad2)">
+          <animateTransform attributeName="transform" type="rotate" from="0 308 208" to="360 308 208" dur="9s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="1100" y="300" width="16" height="16" fill="url(#geoGrad1)">
+          <animateTransform attributeName="transform" type="rotate" from="0 1108 308" to="-360 1108 308" dur="8s" repeatCount="indefinite"/>
+        </rect>
+        <circle cx="400" cy="700" r="10" fill="#ffb347" opacity="0.5">
+          <animate attributeName="cy" values="700;670;700" dur="7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="1000" cy="200" r="10" fill="#00bfff" opacity="0.5">
+          <animate attributeName="cy" values="200;230;200" dur="7s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </svg>
+    <!-- Animated SVG line pattern background -->
+    <svg class="line-bg" width="100%" height="100%" viewBox="0 0 1440 900" preserveAspectRatio="none" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-2;pointer-events:none;">
+      <defs>
+        <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ffe0ec"/>
+          <stop offset="100%" stop-color="#c1eaff"/>
+        </linearGradient>
+      </defs>
+      <g stroke="url(#lineGrad)" stroke-width="2" fill="none" opacity="0.5">
+        <path>
+          <animate attributeName="d" dur="12s" repeatCount="indefinite"
+            values="M0,200 Q360,300 720,200 T1440,200;
+                    M0,200 Q360,100 720,300 T1440,200;
+                    M0,200 Q360,300 720,200 T1440,200"/>
+        </path>
+        <path>
+          <animate attributeName="d" dur="14s" repeatCount="indefinite"
+            values="M0,400 Q400,500 900,400 T1440,400;
+                    M0,400 Q400,300 900,500 T1440,400;
+                    M0,400 Q400,500 900,400 T1440,400"/>
+        </path>
+        <path>
+          <animate attributeName="d" dur="16s" repeatCount="indefinite"
+            values="M0,600 Q360,700 720,600 T1440,600;
+                    M0,600 Q360,500 720,700 T1440,600;
+                    M0,600 Q360,700 720,600 T1440,600"/>
+        </path>
+        <path>
+          <animate attributeName="d" dur="18s" repeatCount="indefinite"
+            values="M0,800 Q400,900 900,800 T1440,800;
+                    M0,800 Q400,700 900,900 T1440,800;
+                    M0,800 Q400,900 900,800 T1440,800"/>
+        </path>
+      </g>
+    </svg>
     <!-- Artistic animated SVG background -->
     <svg class="art-bg" width="100%" height="100%" viewBox="0 0 1440 900" preserveAspectRatio="none" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;">
       <defs>
