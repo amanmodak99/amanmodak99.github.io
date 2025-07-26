@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Aman Kumar Modak's portfolio of innovative web applications and software projects. See my work in React, Node.js, and modern web technologies.">
+    <meta name="keywords" content="portfolio, projects, web development, software projects, react, node.js, javascript">
+    <title>Projects - Aman Kumar Modak | Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/advanced-animations.css">
+    <link rel="stylesheet" href="css/3d-effects.css">
+    <link rel="stylesheet" href="css/enhanced-sections.css">
+    <link rel="stylesheet" href="css/projects-enhanced.css">
+    <link rel="stylesheet" href="css/extras.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <!-- Skip to main content link -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Dark/Light Mode Toggle -->
+    <button id="theme-toggle" class="theme-toggle" title="Toggle dark/light mode" aria-label="Toggle theme">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+        <i class="fas fa-sun" aria-hidden="true"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Aman Modak - Home">Aman Modak</a>
+            <ul class="nav-links" role="menubar">
+                <li role="none">
+                    <a href="index.html#home" role="menuitem">Home</a>
+                </li>
+                <li role="none">
+                    <a href="index.html#about" role="menuitem">About</a>
+                </li>
+                <li role="none">
+                    <a href="projects.html" class="active" role="menuitem">Projects</a>
+                </li>
+                <li role="none">
+                    <a href="certifications.html" role="menuitem">Certifications</a>
+                </li>
+                <li role="none">
+                    <a href="index.html#contact" role="menuitem">Contact</a>
+                </li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main" class="page-main">
+        <!-- Projects Showcase -->
+        <section id="projects" class="projects-page fade-in-up">
+            <div class="container">
+                <h1 class="page-title">My Creative <span class="gradient-text holographic">Portfolio</span></h1>
+                <p class="page-subtitle">
+                    Each project represents a unique challenge transformed into an elegant solution. 
+                    From concept to deployment, these showcases demonstrate my commitment to 
+                    <strong>excellence</strong>, <strong>innovation</strong>, and <strong>user-centric design</strong>.
+                </p>
+                
+                <!-- Project Filter -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th"></i>
+                        All Projects
+                    </button>
+                    <button class="filter-btn" data-filter="web">
+                        <i class="fas fa-globe"></i>
+                        Web Applications
+                    </button>
+                    <button class="filter-btn" data-filter="frontend">
+                        <i class="fas fa-paint-brush"></i>
+                        Frontend
+                    </button>
+                    <button class="filter-btn" data-filter="fullstack">
+                        <i class="fas fa-layer-group"></i>
+                        Full-Stack
+                    </button>
+                    <button class="filter-btn" data-filter="mobile">
+                        <i class="fas fa-mobile-alt"></i>
+                        Mobile-Responsive
+                    </button>
+                </div>
+
+                <div class="projects-grid stagger-container">
+                    <!-- Project 1: E-Commerce Platform -->
+                    <article class="project-card card-3d perspective-container" data-category="web fullstack" itemscope itemtype="https://schema.org/CreativeWork">
+                        <div class="project-image-container">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3 itemprop="name">TechMart E-Commerce</h3>
+                                    <p>Full-featured online shopping platform with advanced functionality</p>
+                                    <div class="project-links">
+                                        <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i>
+                                            Live Demo
+                                        </a>
+                                        <a href="#" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-github"></i>
+                                            Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop" alt="E-Commerce Platform Screenshot" class="project-image">
+                            <div class="project-status">
+                                <span class="status-badge completed">Completed</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-type">Full-Stack Application</span>
+                                <span class="project-date">2024</span>
+                            </div>
+                            <h3 class="project-title" itemprop="name">TechMart E-Commerce Platform</h3>
+                            <p class="project-description" itemprop="description">
+                                A comprehensive e-commerce solution featuring user authentication, product catalog, 
+                                shopping cart, payment integration, and admin dashboard. Built with React, Node.js, 
+                                and MongoDB for seamless user experience.
+                            </p>
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Secure Authentication</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Payment Integration</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Analytics Dashboard</span>
+                                </div>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">Stripe API</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Weather Dashboard -->
+                    <article class="project-card card-3d perspective-container" data-category="web frontend" itemscope itemtype="https://schema.org/CreativeWork">
+                        <div class="project-image-container">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3 itemprop="name">WeatherPro Dashboard</h3>
+                                    <p>Real-time weather tracking with beautiful visualizations</p>
+                                    <div class="project-links">
+                                        <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i>
+                                            Live Demo
+                                        </a>
+                                        <a href="#" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-github"></i>
+                                            Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=250&fit=crop" alt="Weather Dashboard Screenshot" class="project-image">
+                            <div class="project-status">
+                                <span class="status-badge completed">Completed</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-type">Frontend Application</span>
+                                <span class="project-date">2024</span>
+                            </div>
+                            <h3 class="project-title" itemprop="name">WeatherPro Dashboard</h3>
+                            <p class="project-description" itemprop="description">
+                                An intuitive weather dashboard providing real-time weather data, forecasts, and 
+                                interactive maps. Features location-based weather, severe weather alerts, and 
+                                historical weather patterns with stunning data visualizations.
+                            </p>
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Geolocation</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-chart-area"></i>
+                                    <span>Data Visualization</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-bell"></i>
+                                    <span>Weather Alerts</span>
+                                </div>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Chart.js</span>
+                                <span class="tech-tag">OpenWeather API</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">HTML5</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Portfolio Website -->
+                    <article class="project-card card-3d perspective-container" data-category="web frontend mobile" itemscope itemtype="https://schema.org/CreativeWork">
+                        <div class="project-image-container">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3 itemprop="name">Developer Portfolio</h3>
+                                    <p>Modern, responsive portfolio with 3D animations</p>
+                                    <div class="project-links">
+                                        <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i>
+                                            Live Demo
+                                        </a>
+                                        <a href="#" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-github"></i>
+                                            Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop" alt="Portfolio Website Screenshot" class="project-image">
+                            <div class="project-status">
+                                <span class="status-badge completed">Completed</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-type">Portfolio Website</span>
+                                <span class="project-date">2024</span>
+                            </div>
+                            <h3 class="project-title" itemprop="name">Modern Developer Portfolio</h3>
+                            <p class="project-description" itemprop="description">
+                                A cutting-edge portfolio website featuring 3D animations, interactive elements, 
+                                and immersive user experience. Showcases projects, skills, and achievements with 
+                                modern design principles and advanced CSS/JavaScript techniques.
+                            </p>
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-cube"></i>
+                                    <span>3D Animations</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Fully Responsive</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-palette"></i>
+                                    <span>Dark/Light Theme</span>
+                                </div>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">GSAP</span>
+                                <span class="tech-tag">Three.js</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Task Management App -->
+                    <article class="project-card card-3d perspective-container" data-category="web fullstack mobile" itemscope itemtype="https://schema.org/CreativeWork">
+                        <div class="project-image-container">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3 itemprop="name">TaskFlow Manager</h3>
+                                    <p>Collaborative task management with real-time updates</p>
+                                    <div class="project-links">
+                                        <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i>
+                                            Live Demo
+                                        </a>
+                                        <a href="#" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-github"></i>
+                                            Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop" alt="Task Management App Screenshot" class="project-image">
+                            <div class="project-status">
+                                <span class="status-badge in-progress">In Progress</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-type">Web Application</span>
+                                <span class="project-date">2024</span>
+                            </div>
+                            <h3 class="project-title" itemprop="name">TaskFlow Management System</h3>
+                            <p class="project-description" itemprop="description">
+                                A comprehensive task management platform with team collaboration features, 
+                                real-time updates, deadline tracking, and productivity analytics. Designed 
+                                for teams and individuals to boost productivity and project organization.
+                            </p>
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Team Collaboration</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Real-time Updates</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-chart-pie"></i>
+                                    <span>Analytics Dashboard</span>
+                                </div>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Socket.io</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Redux</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Learning Platform -->
+                    <article class="project-card card-3d perspective-container" data-category="web fullstack" itemscope itemtype="https://schema.org/CreativeWork">
+                        <div class="project-image-container">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3 itemprop="name">EduTech Platform</h3>
+                                    <p>Interactive learning platform with video courses</p>
+                                    <div class="project-links">
+                                        <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i>
+                                            Live Demo
+                                        </a>
+                                        <a href="#" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-github"></i>
+                                            Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=250&fit=crop" alt="Learning Platform Screenshot" class="project-image">
+                            <div class="project-status">
+                                <span class="status-badge planning">Planning</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-type">Educational Platform</span>
+                                <span class="project-date">2024</span>
+                            </div>
+                            <h3 class="project-title" itemprop="name">EduTech Learning Platform</h3>
+                            <p class="project-description" itemprop="description">
+                                An interactive e-learning platform featuring video courses, quizzes, progress tracking, 
+                                and certificates. Designed to provide engaging educational experiences with modern 
+                                learning methodologies and user-friendly interface.
+                            </p>
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-video"></i>
+                                    <span>Video Streaming</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Certificates</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>Interactive Quizzes</span>
+                                </div>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">AWS S3</span>
+                                <span class="tech-tag">WebRTC</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6: Social Media Analytics -->
+                    <article class="project-card card-3d perspective-container" data-category="web frontend" itemscope itemtype="https://schema.org/CreativeWork">
+                        <div class="project-image-container">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3 itemprop="name">SocialMetrics Dashboard</h3>
+                                    <p>Advanced analytics for social media performance</p>
+                                    <div class="project-links">
+                                        <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i>
+                                            Live Demo
+                                        </a>
+                                        <a href="#" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-github"></i>
+                                            Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" alt="Analytics Dashboard Screenshot" class="project-image">
+                            <div class="project-status">
+                                <span class="status-badge completed">Completed</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-type">Analytics Dashboard</span>
+                                <span class="project-date">2023</span>
+                            </div>
+                            <h3 class="project-title" itemprop="name">SocialMetrics Analytics</h3>
+                            <p class="project-description" itemprop="description">
+                                A comprehensive social media analytics dashboard providing insights into engagement, 
+                                reach, and performance metrics across multiple platforms. Features real-time data 
+                                visualization and automated reporting capabilities.
+                            </p>
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <span>Data Visualization</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-sync-alt"></i>
+                                    <span>Real-time Updates</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-file-export"></i>
+                                    <span>Export Reports</span>
+                                </div>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">D3.js</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">API Integration</span>
+                                <span class="tech-tag">Chart.js</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Project Statistics -->
+                <div class="project-stats">
+                    <div class="stats-container glass-card">
+                        <h3>Project Impact & Metrics</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-number" data-count="50000">50K+</span>
+                                    <span class="stat-label">Lines of Code</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-number" data-count="10000">10K+</span>
+                                    <span class="stat-label">Users Reached</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-number" data-count="1000">1K+</span>
+                                    <span class="stat-label">Development Hours</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-number" data-count="98">98%</span>
+                                    <span class="stat-label">Client Satisfaction</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="projects-cta">
+                    <div class="cta-content glass-card">
+                        <h3>Ready to Start Your Next Project?</h3>
+                        <p>
+                            Let's collaborate to bring your vision to life with cutting-edge technology 
+                            and innovative solutions that drive real results.
+                        </p>
+                        <div class="cta-buttons">
+                            <a href="index.html#contact" class="btn btn-primary liquid-btn">
+                                <i class="fas fa-rocket"></i>
+                                Start a Project
+                            </a>
+                            <a href="certifications.html" class="btn btn-outline">
+                                <i class="fas fa-award"></i>
+                                View Certifications
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                    <!-- Project Card 1 -->
+                    <article class="project-card hover-shadow" itemscope itemtype="https://schema.org/CreativeWork">
+                        <div class="project-image-container">
+                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Club Management System interface showing dashboard and features" 
+                                 loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title" itemprop="name">Club Management System</h2>
+                            <p class="project-description" itemprop="description">
+                                A comprehensive full-stack platform designed to streamline college club operations. 
+                                Features include user authentication, event scheduling, member management, and 
+                                internal communication tools for enhanced collaboration.
+                            </p>
+                            <div class="project-tech" aria-label="Technologies used">
+                                <span class="badge">React</span>
+                                <span class="badge">Node.js</span>
+                                <span class="badge">MongoDB</span>
+                                <span class="badge">Express</span>
+                                <span class="badge">JWT Auth</span>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="project-link hover-scale" 
+                                       aria-label="View Club Management System source code on GitHub">
+                                        <i class="fab fa-github" aria-hidden="true"></i> Code
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="project-link hover-scale" 
+                                       aria-label="View Club Management System live demo">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
+                                    </a>
+                                </div>
+                                <button class="like-button ripple" aria-label="Like this project" data-project="club-management">
+                                    <i class="far fa-heart" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 2 -->
+                    <article class="project-card hover-shadow" itemscope itemtype="https://schema.org/CreativeWork">
+                        <div class="project-image-container">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Smart Agriculture System showing IoT sensors and crop monitoring interface" 
+                                 loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title" itemprop="name">Smart Agriculture System</h2>
+                            <p class="project-description" itemprop="description">
+                                An innovative AI and IoT-powered agricultural solution that enhances farm productivity 
+                                through real-time monitoring. Utilizes computer vision for crop health analysis, 
+                                environmental sensors, and predictive analytics for optimal farming decisions.
+                            </p>
+                            <div class="project-tech" aria-label="Technologies used">
+                                <span class="badge">Python</span>
+                                <span class="badge">IoT</span>
+                                <span class="badge">AI/ML</span>
+                                <span class="badge">OpenCV</span>
+                                <span class="badge">TensorFlow</span>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="project-link hover-scale" 
+                                       aria-label="View Smart Agriculture System source code on GitHub">
+                                        <i class="fab fa-github" aria-hidden="true"></i> Code
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="project-link hover-scale" 
+                                       aria-label="Read more about Smart Agriculture System">
+                                        <i class="fas fa-info-circle" aria-hidden="true"></i> Details
+                                    </a>
+                                </div>
+                                <button class="like-button ripple" aria-label="Like this project" data-project="smart-agriculture">
+                                    <i class="far fa-heart" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 3 -->
+                    <article class="project-card hover-shadow" itemscope itemtype="https://schema.org/CreativeWork">
+                        <div class="project-image-container">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                                 alt="E-commerce platform showing modern shopping interface" 
+                                 loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title" itemprop="name">Modern E-commerce Platform</h2>
+                            <p class="project-description" itemprop="description">
+                                A fully responsive e-commerce solution built with modern web technologies. 
+                                Features include product catalog, shopping cart, secure payment integration, 
+                                user accounts, and admin dashboard for comprehensive store management.
+                            </p>
+                            <div class="project-tech" aria-label="Technologies used">
+                                <span class="badge">Next.js</span>
+                                <span class="badge">TypeScript</span>
+                                <span class="badge">Stripe</span>
+                                <span class="badge">Prisma</span>
+                                <span class="badge">PostgreSQL</span>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="project-link hover-scale" 
+                                       aria-label="View E-commerce Platform source code on GitHub">
+                                        <i class="fab fa-github" aria-hidden="true"></i> Code
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="project-link hover-scale" 
+                                       aria-label="View E-commerce Platform live demo">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
+                                    </a>
+                                </div>
+                                <button class="like-button ripple" aria-label="Like this project" data-project="ecommerce">
+                                    <i class="far fa-heart" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 4 -->
+                    <article class="project-card hover-shadow" itemscope itemtype="https://schema.org/CreativeWork">
+                        <div class="project-image-container">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Data analytics dashboard with charts and visualizations" 
+                                 loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title" itemprop="name">Real-time Analytics Dashboard</h2>
+                            <p class="project-description" itemprop="description">
+                                An interactive data visualization platform that provides real-time insights 
+                                through dynamic charts and graphs. Built with modern data processing libraries 
+                                and WebSocket connections for live data streaming and analysis.
+                            </p>
+                            <div class="project-tech" aria-label="Technologies used">
+                                <span class="badge">React</span>
+                                <span class="badge">D3.js</span>
+                                <span class="badge">WebSocket</span>
+                                <span class="badge">Chart.js</span>
+                                <span class="badge">Redis</span>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="project-link hover-scale" 
+                                       aria-label="View Analytics Dashboard source code on GitHub">
+                                        <i class="fab fa-github" aria-hidden="true"></i> Code
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="project-link hover-scale" 
+                                       aria-label="View Analytics Dashboard live demo">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
+                                    </a>
+                                </div>
+                                <button class="like-button ripple" aria-label="Like this project" data-project="analytics">
+                                    <i class="far fa-heart" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center" style="margin-top: 4rem;">
+                    <a href="index.html#contact" class="btn btn-primary btn-lg hover-scale">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        Let's Build Something Together
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 Aman Kumar Modak. Designed & built with <i class="fas fa-heart" aria-hidden="true"></i> and passion for great UX.</p>
+        </div>
+    </footer>
+    
+    <!-- Animation Libraries -->
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core@1.2.0/dist/mo.umd.js" defer></script>
+    
+    <!-- Custom Scripts -->
+    <script src="js/utils.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/advanced-effects.js" defer></script>
+    <script src="js/3d-controller.js" defer></script>
+    <script src="js/projects-controller.js" defer></script>
+    <script src="js/interactions.js" defer></script>
+</body>
+</html>
