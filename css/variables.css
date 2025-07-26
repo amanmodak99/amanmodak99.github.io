@@ -1,0 +1,142 @@
+/* =================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   ================================= */
+
+:root {
+    /* === COLOR PALETTE === */
+    /* Primary Colors */
+    --primary-blue: #3B82F6;
+    --primary-purple: #8B5CF6;
+    --primary-cyan: #06B6D4;
+    --primary-pink: #EC4899;
+    
+    /* Dark Theme Colors */
+    --dark-bg-primary: #0B1120;
+    --dark-bg-secondary: #111827;
+    --dark-bg-tertiary: #1F2937;
+    --dark-text-primary: #F9FAFB;
+    --dark-text-secondary: #9CA3AF;
+    --dark-text-muted: #6B7280;
+    --dark-border: rgba(255, 255, 255, 0.1);
+    --dark-shadow: rgba(0, 0, 0, 0.4);
+    
+    /* Light Theme Colors */
+    --light-bg-primary: #F8FAFC;
+    --light-bg-secondary: #F1F5F9;
+    --light-bg-tertiary: #E2E8F0;
+    --light-text-primary: #1E293B;
+    --light-text-secondary: #475569;
+    --light-text-muted: #64748B;
+    --light-border: rgba(71, 85, 105, 0.15);
+    --light-shadow: rgba(71, 85, 105, 0.12);
+    
+    /* Light Theme Accent Colors */
+    --light-accent-bg: rgba(59, 130, 246, 0.05);
+    --light-card-bg: rgba(255, 255, 255, 0.8);
+    --light-hover-bg: rgba(59, 130, 246, 0.08);
+    
+    /* === GRADIENT DEFINITIONS === */
+    --gradient-primary: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    --gradient-secondary: linear-gradient(135deg, var(--primary-cyan), var(--primary-blue));
+    --gradient-accent: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+    --gradient-text: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+    
+    /* === DYNAMIC THEME VARIABLES === */
+    /* Default to Light Theme */
+    --bg-color: var(--light-bg-primary);
+    --bg-secondary: var(--light-bg-secondary);
+    --bg-tertiary: var(--light-bg-tertiary);
+    --text-primary: var(--light-text-primary);
+    --text-secondary: var(--light-text-secondary);
+    --text-muted: var(--light-text-muted);
+    --border-color: var(--light-border);
+    --shadow-color: var(--light-shadow);
+    
+    /* === SPACING SYSTEM === */
+    --space-xs: 0.25rem;    /* 4px */
+    --space-sm: 0.5rem;     /* 8px */
+    --space-md: 1rem;       /* 16px */
+    --space-lg: 1.5rem;     /* 24px */
+    --space-xl: 2rem;       /* 32px */
+    --space-2xl: 3rem;      /* 48px */
+    --space-3xl: 4rem;      /* 64px */
+    --space-4xl: 6rem;      /* 96px */
+    
+    /* === TYPOGRAPHY SCALE === */
+    --text-xs: 0.75rem;     /* 12px */
+    --text-sm: 0.875rem;    /* 14px */
+    --text-base: 1rem;      /* 16px */
+    --text-lg: 1.125rem;    /* 18px */
+    --text-xl: 1.25rem;     /* 20px */
+    --text-2xl: 1.5rem;     /* 24px */
+    --text-3xl: 1.875rem;   /* 30px */
+    --text-4xl: 2.25rem;    /* 36px */
+    --text-5xl: 3rem;       /* 48px */
+    --text-6xl: 3.75rem;    /* 60px */
+    
+    /* === BORDER RADIUS === */
+    --radius-sm: 0.25rem;   /* 4px */
+    --radius-md: 0.5rem;    /* 8px */
+    --radius-lg: 1rem;      /* 16px */
+    --radius-xl: 1.5rem;    /* 24px */
+    --radius-full: 9999px;
+    
+    /* === SHADOWS === */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.2);
+    --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
+    
+    /* === TRANSITION DURATIONS === */
+    --transition-fast: 150ms;
+    --transition-normal: 300ms;
+    --transition-slow: 500ms;
+    
+    /* === Z-INDEX SCALE === */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+    --z-toast: 1080;
+    
+    /* === BREAKPOINTS (for JavaScript usage) === */
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
+}
+
+/* === LIGHT THEME OVERRIDES === */
+html.light-mode {
+    --bg-color: var(--light-bg-primary);
+    --bg-secondary: var(--light-bg-secondary);
+    --bg-tertiary: var(--light-bg-tertiary);
+    --text-primary: var(--light-text-primary);
+    --text-secondary: var(--light-text-secondary);
+    --text-muted: var(--light-text-muted);
+    --border-color: var(--light-border);
+    --shadow-color: var(--light-shadow);
+}
+
+/* === REDUCED MOTION PREFERENCES === */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --transition-fast: 0ms;
+        --transition-normal: 0ms;
+        --transition-slow: 0ms;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

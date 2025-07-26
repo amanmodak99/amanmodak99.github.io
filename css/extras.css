@@ -1,0 +1,336 @@
+/* =================================
+   NOTIFICATION STYLES
+   ================================= */
+
+.notification {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-xl);
+    z-index: var(--z-toast);
+    min-width: 320px;
+    max-width: 400px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all var(--transition-normal);
+    backdrop-filter: blur(20px);
+}
+
+.notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.notification.hide {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.notification-content i {
+    font-size: var(--text-lg);
+    flex-shrink: 0;
+}
+
+.notification-close {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: var(--space-xs);
+    border-radius: var(--radius-sm);
+    transition: color var(--transition-normal);
+}
+
+.notification-close:hover {
+    color: var(--text-primary);
+}
+
+.notification-success {
+    border-left: 4px solid #10B981;
+}
+
+.notification-success .notification-content i {
+    color: #10B981;
+}
+
+.notification-error {
+    border-left: 4px solid #EF4444;
+}
+
+.notification-error .notification-content i {
+    color: #EF4444;
+}
+
+.notification-warning {
+    border-left: 4px solid #F59E0B;
+}
+
+.notification-warning .notification-content i {
+    color: #F59E0B;
+}
+
+.notification-info {
+    border-left: 4px solid var(--primary-blue);
+}
+
+.notification-info .notification-content i {
+    color: var(--primary-blue);
+}
+
+/* =================================
+   TOOLTIP POPUP STYLES
+   ================================= */
+
+.tooltip-popup {
+    position: fixed;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    white-space: nowrap;
+    z-index: var(--z-tooltip);
+    pointer-events: none;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    animation: tooltip-fade-in 0.2s ease forwards;
+}
+
+@keyframes tooltip-fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+/* =================================
+   RIPPLE EFFECT STYLES
+   ================================= */
+
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* =================================
+   FORM ERROR STYLES
+   ================================= */
+
+.form-input.error {
+    border-bottom-color: #EF4444;
+}
+
+.form-error {
+    color: #EF4444;
+    font-size: var(--text-sm);
+    margin-top: var(--space-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.form-error::before {
+    content: '⚠';
+    font-size: var(--text-sm);
+}
+
+/* =================================
+   ACCESSIBILITY ENHANCEMENTS
+   ================================= */
+
+.keyboard-navigation *:focus {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
+
+.keyboard-navigation .btn:focus {
+    outline-offset: 4px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: #000000;
+        --text-secondary: #000000;
+    }
+    
+    html.light-mode {
+        --border-color: #000000;
+        --text-secondary: #000000;
+    }
+}
+
+/* Reduced data usage */
+@media (prefers-reduced-data: reduce) {
+    .hero-image-blob,
+    .morphing-blob,
+    .particles-background {
+        display: none;
+    }
+    
+    .hero-image,
+    .about-image,
+    .project-image-container img {
+        filter: none;
+        transform: none !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .theme-toggle,
+    .navbar,
+    .hamburger,
+    .particles-background,
+    .scroll-progress,
+    .custom-cursor {
+        display: none !important;
+    }
+    
+    .hero {
+        min-height: auto;
+        padding: var(--space-lg) 0;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .hero-image {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .gradient-text {
+        -webkit-text-fill-color: initial;
+        color: black !important;
+    }
+    
+    .btn {
+        border: 1px solid black;
+        color: black !important;
+        background: white !important;
+    }
+}
+
+/* =================================
+   MOBILE-SPECIFIC ENHANCEMENTS
+   ================================= */
+
+@media (max-width: 768px) {
+    .notification {
+        left: 20px;
+        right: 20px;
+        min-width: auto;
+        transform: translateY(-100%);
+    }
+    
+    .notification.show {
+        transform: translateY(0);
+    }
+    
+    .notification.hide {
+        transform: translateY(-100%);
+    }
+    
+    /* Improve touch targets */
+    .btn {
+        min-height: 44px;
+        padding: var(--space-md) var(--space-lg);
+    }
+    
+    .social-link {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    .hamburger {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    /* Optimize form inputs for mobile */
+    .form-input {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* =================================
+   DARK MODE SPECIFIC ADJUSTMENTS
+   ================================= */
+
+html.light-mode .notification {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+html.light-mode .tooltip-popup {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+html.light-mode .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* =================================
+   PERFORMANCE OPTIMIZATIONS
+   ================================= */
+
+/* GPU acceleration for smooth animations */
+.hero-image,
+.about-image,
+.project-card,
+.skill-icon,
+.btn,
+.social-link,
+.certification-item {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Contain layout shifts */
+.hero-image-container,
+.about-image-container,
+.project-image-container {
+    contain: layout style paint;
+}
+
+/* Optimize repaints */
+.navbar,
+.theme-toggle,
+.scroll-progress {
+    contain: layout style paint;
+}
